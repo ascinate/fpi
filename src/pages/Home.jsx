@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import ione from "/fone.svg";
 import ithree from "/f2.svg";
@@ -9,6 +9,13 @@ import CustomCursor from '../components/CustomCursor';
 
 
 function Home() {
+
+      const [show, setShow] = useState(false);
+ 
+  const handleClick = () => {
+    setShow(true);
+    setTimeout(() => setShow(false), 3000); // Hide after 3 seconds
+  };
     return (
         <>
             <CustomCursor />
@@ -31,7 +38,13 @@ function Home() {
 
                                 <p className='sub-text mb-11'>Seamlessly manage and track all your links. Elevate your brand today!</p>
                                 <button className='theme-color-btn brn-btn' id=''>Get Started</button>
-                                <button className='white-color-btn brn-btn' id=''>Try Demo</button>
+                                <button className='white-color-btn brn-btn' id='' onClick={handleClick}>Try Demo</button>
+                                {show && (
+<div style={styles.notification}>
+          🔔 This is a notification!
+</div>
+      )}
+      
                             </div>
 
                             <div className='ithree'>
@@ -60,7 +73,23 @@ function Home() {
             </main>
 
         </>
+        
     )
 }
+
+
+const styles = {
+  notification: {
+    position: 'fixed',
+    top: '20px',
+    right: '20px',
+    backgroundColor: '#4caf50',
+    color: 'white',
+    padding: '10px 20px',
+    borderRadius: '8px',
+    boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+    zIndex: 1000,
+  }
+};
 
 export default Home;
