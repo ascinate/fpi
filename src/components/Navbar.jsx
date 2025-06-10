@@ -68,7 +68,7 @@ function Navbar() {
                                 }`} >
                                 <div className="p-4 flex justify-between items-center border-b border-gray-200 dark:border-gray-700">
                                   <NavLink to="/" className="text-xl font-bold text-gray-900 dark:text-white">
-                                       <img src='/mobile-logo.png' alt='logo' />
+                                       <img src='/logo.png' alt='logo' width={100}/>
                                   </NavLink>
                                   <button onClick={toggleMenu} className="clones-btn text-gray-700 dark:text-white text-2xl">&times;</button>
                                 </div>

@@ -186,7 +186,7 @@ nav{
     font-weight: 700; 
     position: relative;
     text-transform: capitalize;
-    color: #4479bd;
+    color: var(--secondary-theme-color);
 }
 
 .hero-main-text strong{
@@ -438,7 +438,7 @@ nav li a:hover{
     color: var(--text-white) !important;
 }
 .section-hero{
-    background: #efefef;
+   background-image: linear-gradient(to right, #d5f8f1, #daf9ed, #e1fae8, #e9fbe5, #f1fbe2, #f7fae3, #fcf9e6, #fff8ea, #fff8f2, #fff9fa, #fffcff, #ffffff);
 }
 .banner-tms01{
     width: 68%;
