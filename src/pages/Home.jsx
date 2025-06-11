@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
-import ione from "/home-shape-1-2.png";
+import ione from "/pic2.png";
 import ithree from "/pic1.png";
 import ifour from "/pic3.png";
 import isix from "/pic3.png";
-import five from "/pic6.png";
-import fiver from "/pic6.png";
+import five from "/pic4.png";
+import fiver from "/pic4.png";
 import CustomCursor from '../components/CustomCursor';
 
 
