@@ -534,6 +534,10 @@ nav li a:hover {
     .five {
         display: none;
     }
+
+    .signup-nows li:last-child>a {
+        margin-left: -120px;
+    }
 }
 
 @media (min-width: 1600px) {}
@@ -573,6 +577,10 @@ nav li a:hover {
     .five {
         display: none;
     }
+
+    .signup-nows li:last-child>a {
+        margin-left: -120px;
+    }
 }
 
 
@@ -584,6 +592,12 @@ nav li a:hover {
     .c {
         margin-left: 80px;
     }
+
+
+    .signup-nows li:last-child>a {
+        margin-left: -120px;
+    }
+
 }
 
 
@@ -638,6 +652,7 @@ nav li a:hover {
         width: 100px;
 
     }
+
     .hero-main-text {
         text-align: center;
     }
@@ -652,6 +667,11 @@ nav li a:hover {
         text-align: center !important;
     }
 
+    .signup-nows li:last-child>a {
+        margin-left: -120px;
+    }
+
+  
 }
 
 
@@ -673,9 +693,7 @@ nav li a:hover {
 
 
 
-@media (max-width: 768px) {
-
-}
+@media (max-width: 768px) {}
 
 
 
@@ -706,13 +724,14 @@ nav li a:hover {
         margin-left: 20%;
         width: 100px;
     }
-    .h{
+
+    .h {
         margin-left: 100px;
     }
 }
 
 @media (max-width: 510px) {
-      .h{
+    .h {
         margin-left: 60px;
     }
 }
