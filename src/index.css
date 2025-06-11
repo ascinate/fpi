@@ -10,7 +10,6 @@
 
 body {
     font-family: "Plus Jakarta Sans", sans-serif;
-    background: #efefef;
 }
 
 a {
@@ -241,12 +240,18 @@ nav {
     right: -60px;
     bottom: -5px;
 }
+.five01{
+  position: absolute;
+    right: 0;
+    top: 50%;
+    animation: logo-spin infinite 20s linear;
+}
 
 
 .white-color-btn {
     margin-left: 20px;
     color: #010101;
-    background-color: var(--text-white);
+    background-color:#eebb37;
 }
 
 .white-color-btn:hover {
@@ -444,17 +449,18 @@ nav li a:hover {
 
 .signup-nows {
     padding-left: 20%;
+    width: 90%;
 }
-
+.xp01{
+  z-index: 3;
+}
 #navbar-default {
     width: 85%;
-    width: 85%;
-    justify-content: center;
     display: flex;
 }
 
 .loggos {
-    width: 15%;
+    width: 11%;
 }
 
 .signup-nows li:last-child {
@@ -485,7 +491,19 @@ nav li a:hover {
 }
 
 .section-hero {
-    background-image: linear-gradient(to right, #d5f8f1, #daf9ed, #e1fae8, #e9fbe5, #f1fbe2, #f7fae3, #fcf9e6, #fff8ea, #fff8f2, #fff9fa, #fffcff, #ffffff);
+  
+}
+
+.section-hero::after {
+   position: absolute;
+   content: "";
+   right: 0;
+   top:0;
+   width: 33%;
+   min-height: 100vh;
+   content: "";
+   background: #22C1C3;
+background: linear-gradient(151deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
 }
 
 .banner-tms01 {
@@ -524,6 +542,23 @@ nav li a:hover {
     border-bottom: solid 1px #09489d !important;
     padding: 14px 20px;
     font-size: 15px;
+}
+
+.signup01{
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    right: -140px;
+    display: table;
+    color: var(--text-white) !important;
+    background: rgb(5, 7, 8);
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    z-index: 2;
+}
+.signup01:hover{
+    background: var(--secondary-theme-color) !important;
 }
 
 @media (min-width: 1280px) {
@@ -573,7 +608,10 @@ nav li a:hover {
         width: 100%;
         right: 0;
     }
-
+    .five01 {
+        right: 180px;
+        top: 40%;
+    }
     .five {
         display: none;
     }
@@ -586,16 +624,36 @@ nav li a:hover {
 
 @media (max-width: 1024px) {
     .b {
-        margin-left: 180px;
+        margin-left: 0;
     }
 
     .c {
-        margin-left: 80px;
+        margin-left: 0;
     }
 
-
+    .g {
+        margin-left: 0;
+    }
     .signup-nows li:last-child>a {
         margin-left: -120px;
+    }
+
+    .signup01{
+        right: -20px;
+    }
+    .ifour{
+        display: none;
+    }
+
+    .hero-main-text {
+        width: 70%;
+        
+    }
+    .banner-tms01{
+        padding-left: 10px;
+    }
+    main{
+        overflow: hidden;
     }
 
 }
@@ -632,10 +690,15 @@ nav li a:hover {
         left: 50px;
     }
 
+     header{
+        border-bottom: solid 1px #ececec;
+        margin-bottom: 30px;
+     }
     .moible-full {
         max-width: 100%;
         width: 100%;
         justify-content: space-between;
+        padding-right: 10px;
     }
 
     .loggos {
@@ -652,7 +715,12 @@ nav li a:hover {
         width: 100px;
 
     }
-
+    .five01{
+        display: none;
+    }
+    .section-hero::after{
+        display: none;
+    }
     .hero-main-text {
         text-align: center;
     }
@@ -670,6 +738,15 @@ nav li a:hover {
     .signup-nows li:last-child>a {
         margin-left: -120px;
     }
+    .hero-main-text {
+        width: 50%;
+        margin: auto;
+        
+    }
+    .isix{
+        display: none;
+    }
+   
 
   
 }
@@ -761,3 +838,4 @@ nav li a:hover {
     background: rgba(0, 123, 255, 0.6);
     content: "";
 }
+

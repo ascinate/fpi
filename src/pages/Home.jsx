@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
-import ione from "/fone.svg";
-import ithree from "/f2.svg";
-import ifour from "/f3.svg";
-import isix from "/f4.svg";
-import five from "/f5.svg";
+import ione from "/home-shape-1-2.png";
+import ithree from "/pic1.png";
+import ifour from "/pic3.png";
+import isix from "/pic3.png";
+import five from "/pic6.png";
+import fiver from "/pic6.png";
 import CustomCursor from '../components/CustomCursor';
 
 
@@ -22,10 +23,10 @@ function Home() {
             <Navbar />
 
             <main className='float-left w-full'>
-                <section className='section-hero float-left w-full'>
+                <section className='section-hero float-left w-full banner-slider01'>
 
-                    <div className='container mx-auto py-4'>
-                        <div className='container-hero relative'>
+                    <div className='container mx-auto'>
+                        <div className='container-hero relative '>
                             <div className='banner-tms01'>
 
 
@@ -41,7 +42,7 @@ function Home() {
 
                                 </div>
                                 <div className='hero-btn-div'>
-                                    <button className='theme-color-btn brn-btn ' id=''>Get Started</button>
+                                    <button className='theme-color-btn brn-btn ' onClick={handleClick} id=''>Get Started</button>
 
                                     <button className='white-color-btn brn-btn' id='' onClick={handleClick}>Try Demo</button>
                                 </div>
@@ -53,21 +54,25 @@ function Home() {
 
                             </div>
 
-                            <div className='ithree'>
+                            <div className='ithree xp01'>
                                 <img src={ithree} alt="b" className='b'/>
                             </div>
-                            <div className='ifour'>
+                            <div className='ifour xp01'>
                                 <img src={ifour} alt="b" className='c'/>
                             </div>
-                            <div className='ione-face'>
+                            <div className='ione-face xp01'>
                                 <img src={ione} alt="g" className='g'/>
                             </div>
-                            <div className='isix'>
+                            <div className='isix '>
                                 <img src={isix} alt="h" className='h'/>
                             </div>
-                            <div className='five'>
+                            <div className='five xp01'>
 
                                 <img src={five} alt="f" className=''/>
+                            </div>
+                            <div className='five01 xp01'>
+
+                                <img src={fiver} alt="f" className=''/>
                             </div>
 
 

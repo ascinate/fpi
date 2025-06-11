@@ -10,13 +10,31 @@ const navItems = [
     { name: 'Pricing', path: '' },
     { name: 'Blog', path: '' },
     { name: 'Contact', path: '' },
-    { name: 'Sign up Now', path: '' }
 ];
 
 
 function Navbar() {
 
 
+     const [show, setShow] = useState(false);
+    
+      const handleClick = () => {
+        setShow(true);
+        setTimeout(() => setShow(false), 3000); 
+      };
+        const styles = {
+      notification: {
+        position: 'fixed',
+        top: '20px',
+        right: '20px',
+        backgroundColor: '#4caf50',
+        color: 'white',
+        padding: '10px 20px',
+        borderRadius: '8px',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+        zIndex: 1000,
+      }
+    };
 
     const navLinkClass = ({ isActive }) =>
         `block py-2 px-3 rounded-sm md:p-0 font-medium ${isActive
@@ -41,14 +59,14 @@ function Navbar() {
                             </NavLink>
 
 
-                            <button onClick={toggleMenu} className="border-round-bar text-gray-800 dark:text-white focus:outline-none text-2xl md:hidden">
+                            <button onClick={toggleMenu} className="border-round-bar ouline text-gray-800 dark:text-white focus:outline-none text-2xl lg:hidden">
                                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
                                 </svg>
                             </button>
 
                             <div className="md:block md:w-auto" id="navbar-default">
-                                <ul className="font-medium signup-nows flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                                <ul className="font-medium signup-nows flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-2 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                                     {navItems.map((item, index) => (
                                         <li key={index}>
                                             <NavLink to={item.path} className={navLinkClass}>
@@ -56,6 +74,10 @@ function Navbar() {
                                             </NavLink>
                                         </li>
                                     ))}
+
+                                    <li>
+                                       <button type='button' onClick={handleClick} className='signup01'>Sign up Now</button>
+                                    </li>
 
                                 </ul>
                             </div>
@@ -88,6 +110,11 @@ function Navbar() {
 
                     </div>
                 </nav>
+                {show && (
+                    <div style={styles.notification}>
+                        🔔 This is a notification!
+                    </div>
+                )}
             </header>
 
         </>

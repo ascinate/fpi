@@ -19,6 +19,12 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+.five01{
+  position: absolute;
+    right: 0;
+    top: 50%;
+    animation: logo-spin infinite 20s linear;
+}
 
 @keyframes logo-spin {
   from {
