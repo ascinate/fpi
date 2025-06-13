@@ -48,7 +48,7 @@ function Home() {
                                 </div>
                                 {show && (
                                     <div style={styles.notification}>
-                                        🔔 This is a notification!
+                                        🔔 Feature comming soon!
                                     </div>
                                 )}
 
