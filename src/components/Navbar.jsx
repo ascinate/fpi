@@ -112,7 +112,7 @@ function Navbar() {
                 </nav>
                 {show && (
                     <div style={styles.notification}>
-                        🔔 This is a notification!
+                        🔔 Feature comming soon!
                     </div>
                 )}
             </header>
